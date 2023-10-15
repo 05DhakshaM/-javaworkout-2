@@ -1,0 +1,22 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class AnagramCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first string: ");
+        String string1 = scanner.nextLine();
+        System.out.print("Enter the second string: ");
+        String string2 = scanner.nextLine();
+        System.out.println("Are Anagrams: " + areAnagrams(string1, string2));
+        scanner.close();
+    }
+
+    static boolean areAnagrams(String a, String b) {
+        char[] charArray1 = a.toCharArray();
+        char[] charArray2 = b.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+        return Arrays.equals(charArray1, charArray2);
+    }
+}
