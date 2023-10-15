@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class PatternOccurrence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the main string: ");
+        String mainString = scanner.nextLine();
+        System.out.print("Enter the pattern string: ");
+        String pattern = scanner.nextLine();
+        int occurrences = mainString.split(pattern, -1).length - 1;
+        System.out.println("Occurrences of pattern: " + occurrences);
+        scanner.close();
+    }
+}
