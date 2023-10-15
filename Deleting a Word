@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class DeleteWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        System.out.print("Word to delete: ");
+        String wordToDelete = scanner.nextLine();
+        System.out.println("Updated sentence: " + sentence.replace(wordToDelete, "").trim());
+        scanner.close();
+    }
+}
