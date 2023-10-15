@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class WordEndingWith {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        System.out.print("Enter ending letters/letter: ");
+        String ending = scanner.nextLine();
+        for (String word : sentence.split("\\s+")) {
+            if (word.endsWith(ending)) {
+                System.out.println(word);
+            }
+        }
+        scanner.close();
+    }
+}
