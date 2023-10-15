@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Piglatin {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+        System.out.println("In Piglatin: " + toPigLatin(word));
+        scanner.close();
+    }
+
+    static String toPigLatin(String word) {
+        int index = -1;
+        for (int i = 0; i < word.length(); i++) {
+            if ("AEIOUaeiou".indexOf(word.charAt(i)) != -1) {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            return word + "ay";
+        } else if (index == 0) {
+            return word + "way";
+        } else {
+            return word.substring(index) + word.substring(0, index) + "ay";
+        }
+    }
+}
