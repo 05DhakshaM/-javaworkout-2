@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class DigitsFirst {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        StringBuilder digits = new StringBuilder();
+        StringBuilder chars = new StringBuilder();
+        for (char c : input.toCharArray()) {
+            if (Character.isDigit(c)) {
+                digits.append(c);
+            } else {
+                chars.append(c);
+            }
+        }
+        System.out.println("Modified String: " + digits.toString() + chars.toString());
+        scanner.close();
+    }
+}
