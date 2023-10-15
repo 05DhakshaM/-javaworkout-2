@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CountWordsEndingWith {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        System.out.print("Enter ending letter: ");
+        char ending = scanner.nextLine().charAt(0);
+        int count = 0;
+        for (String word : sentence.split("\\s+")) {
+            if (word.charAt(word.length() - 1) == ending) {
+                count++;
+            }
+        }
+        System.out.println("Number of words ending with " + ending + ": " + count);
+        scanner.close();
+    }
+}
