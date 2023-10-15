@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class ChangeCase {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+        System.out.println("Changed case: " + (word.equals(word.toLowerCase()) ? word.toUpperCase() : word.toLowerCase()));
+        scanner.close();
+    }
+}
