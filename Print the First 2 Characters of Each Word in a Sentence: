@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class FirstTwoCharsOfWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        for (String word : sentence.split("\\s+")) {
+            if (word.length() >= 2) {
+                System.out.print(word.substring(0, 2) + " ");
+            } else {
+                System.out.print(word + " ");
+            }
+        }
+        scanner.close();
+    }
+}
