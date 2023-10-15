@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Encoding {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        System.out.println("Encoded String: " + encode(input));
+        scanner.close();
+    }
+
+    static String encode(String s) {
+        StringBuilder result = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            result.append((char) (c + 2));
+        }
+        return result.toString();
+    }
+}
