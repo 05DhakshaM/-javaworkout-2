@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class CapitalizeFirstLetter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        String capitalized = input.substring(0, 1).toUpperCase() + input.substring(1);
+        System.out.println("Capitalized String: " + capitalized);
+        scanner.close();
+    }
+}
